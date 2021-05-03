@@ -1,4 +1,4 @@
-# Oracle do Básico ao Avançado :mortar_board:
+# Oracle SQL do Básico ao Avançado :mortar_board:
 
 ## Visão Geral :eyes:
 
