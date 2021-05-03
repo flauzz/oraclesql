@@ -1,0 +1,22 @@
+--expressões regulares e metacaracteres:
+--poderosos componentes para processamento de textos em linguagem de programação
+--utilizam um conjunto de símbolos chamados metacaracteres ou caracteres literais para verificar padrões
+--metacaracteres: caracteres especiais com significados especiais em expressões regulares, usados para pesquisar por padrões em um texto
+--ganha-se um poder de pesquisa maior em relação ao like
+--. chamado ponto. aceita qlqr caractere, letra, número, espaço e símbolos. Ex.: n.o - não, nÃo, nao, n o, n!o n2o
+--[] chamado lista. aceita qlqr caractere inserido entre os colchetes. Ex.: n[aã]o - não, nao
+--na lista tbm podemos utilizar intervalos de caracteres. Ex.: [0-9], [a-z] - 0, 9, 2, b, h
+--na lista tbm podemos utilizar classes posix. Ex.: [:upper:] - letras maiúsculas e acentos, [:alpha:] - maiúsculas, minúsculas e acentos, entre outros
+--[^] chamado lista-negada. aceita todos os caracteres com exceção dos que estão na lista após o ^. Ex.: [^a-z] - tudo menos letras minúsculas de a-z,
+--[^0-9^] - tudo menos números de 0-9 e o chapéu(^)
+--? chamado opcional. indica que o caractere ou [lista] que antecede o ? pode existir ou não. Ex.: fala[r!]? - falar, fala!, fala, falar!
+--* chamado asterisco. indica que o caracter ou [lista] que antecede o * pode aparecer em qlqr quantidade(0-n). Ex.: 6*0 - 66660, 60, 0
+--+ chamado mais. similar ao * com a diferença que o caractere ou a [lista] que o antecede deve aparecer ao menos uma vez; Ex.: 6+0 - 60, 66666660
+--{} chamado chaves. indica a qntd de vezes ou o intervalo de qntd que um caractere ou [lista] deve aparecer. Ex.: bi{2,3} - bii, biii
+--^ chamado circunflexo. indica o que é permitido no início da linha. Ex.: ^[0-9] - permite iniciar com números, ^[^0-9] - não permite iniciar com números
+--$ chamado cifrão. marca o final de uma linha. Ex.: ^$ - uma linha em branco (inicia e termina), .....$ últimos 5 caracteres quaisquer,
+--^.{20,60}$ - permitido iniciar com qlqr caratere e se extender por entre 20 e 60 caracteres e encerra
+--\ chamado scape. tira o efeito do metacaractere imediatamente posterior e o transforma em literal. Ex.: [0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2} - num cpf
+--| chamado ou. indica opcionalidade, ou um ou outro. Ex.: bom dia|boa tarde|boa noite, http://|ftp://
+--() chamado grupo. agrupa um grupo de metacaracteres. Ex.: (in|con)?certo - incerto, concerto e certo, (www\.)?oracle\.com
+--podemos utilizar expressões regulares em funções: regexp_like, regexp_replace, regexp_substr, regexp_instr, regexp_count

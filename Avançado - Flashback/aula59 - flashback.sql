@@ -1,0 +1,14 @@
+--flashback:
+--ao deletar ou atualizar linhas de alguma tabela (delete ou update) acidentalmente/indevidamente
+--poderá consultar a tabela como ela estava numa posição específica ou para um scn-system change number antes de causar o problema
+--com o resultado da consulta poderá resolver o problema no presente
+--ao deletar uma tabela (drop) acidentalmente/indevidamente poderá restaurá-la para uma posição antes da remoção (a partir da lixeira)
+--scn-system change number: número incremental único que está associado a cada mudança feita no banco de dados
+--flashback query: permite consultas em uma tabela que foi modificada indevidamente (insert, update, delete) por meio de uma posição específica ou scn
+--flashback drop: permite restaurar uma tabela que foi removida (drop) a partir da lixeira
+--recupera a tabela, seus dados, seus indexes e suas constraints com o banco de dados online(aberto)
+--flashback table: permite voltar uma tabela que foi modificada(update, delete e insert) indevidamente para uma posição anterior
+--possível aplicar em várias tabelas de uma única vez
+--flashback database: permite voltar todo o banco de dados que foi modificado indevidamente para uma posição anterior (dba)
+--utilidades e aplicação: úteis para recuperação de dados sem a necessidade de restauração do banco de dados com backups
+--não é utilizado no caso de falhas e danos de discos (storage) - Para isso o dba utilizará oracle rman, restore e recover

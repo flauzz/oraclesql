@@ -1,0 +1,3 @@
+--insert para múltiplas tabelas (multitable insert)
+--se precisar inserir os mesmos dados para mais de uma tabela é possível com o insert com um único comando
+--tipos de multitable insert: insert incondicional, insert all conditional, insert first conditional e insert pivoting
