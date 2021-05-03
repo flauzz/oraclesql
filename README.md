@@ -17,7 +17,7 @@
 #### Avançado:
 
 - Objetos
-- Views
+- Views (Materialized Views)
 - Indexes
 - Flashback
 - Tabelas temporárias
